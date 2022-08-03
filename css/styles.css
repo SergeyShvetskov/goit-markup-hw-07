@@ -34,6 +34,11 @@ img {
     text-decoration: none;    
     line-height: 1.17;
 }
+
+.site-nav__link {
+    text-decoration: none;
+    line-height: 1.17;
+}
 .body-page {    
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
@@ -42,24 +47,27 @@ img {
 }
 
 /* Рамка хедера */
-.page-header .container{
+.header-page .container{
     display: flex;    
     padding-top: 25px;
     padding-bottom: 24px;
     align-items: center;
 }
 
-.page-header {    
+.header-page {    
     border-bottom: 1px solid var(--brand-color-heder-line);
 }
 
+.header-page__nav {
+    display: flex;
+}
 /* Подсветка */
 .site-nav {
     display: flex;
     align-items: center;
     list-style: none;     
 }
-.site-nav .link {    
+.site-nav__link {    
     display: block;
     font-size: 14px;
     font-weight: 500;
@@ -70,18 +78,16 @@ img {
     transition-duration: var(--animation-duration);
     transition-timing-function: var(--animation-timing-function);
 }
-.site-nav .link:hover, 
-.site-nav .link:focus, 
-.site-nav .link.current {
+.site-nav__link:hover, 
+.site-nav__link:focus, 
+.site-nav__link--active {
     color: var(--brand-color-blue-light);
 }
-.site-nav-element + .site-nav-element {
+.site-nav__item + .site-nav__item {
     margin-left: 50px;
 }
 
-.navigation {
-    display: flex;
-}
+
 
 /* Хедер, почта, телефон */
 .auth-nav {
@@ -90,11 +96,15 @@ img {
     list-style: none;
 }
 
-.auth-nav-element + .auth-nav-element {
+.auth-nav__item + .auth-nav__item {
  margin-left: 30px;
 }
 
-.auth-nav .link {    
+.auth-nav__link {    
+    text-decoration: none;
+    line-height: 1.17;
+    display: flex;
+    align-items: center;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -104,21 +114,19 @@ img {
     transition-duration: var(--animation-duration);
     transition-timing-function: var(--animation-timing-function);
 }
-.auth-nav .link:hover, .auth-nav .link:focus {
+.auth-nav__link:hover,
+.auth-nav__link:focus {
     color: var(--brand-color-blue-light);       
 }
-.auth-nav-mail, .auth-nav-phone {
-    display: flex;
-    align-items: center;
-}
 
-.auth-nav-mail-svg {    
+
+.auth-nav__icon-mail {    
     height: 12px;
     width: 16px;
     fill: currentColor;
     margin-right: 10px;
 } 
-.auth-nav-phone-svg {
+.auth-nav__icon-phone {
     height: 16px;
     width: 10px;
     fill: currentColor;   
@@ -176,7 +184,7 @@ img {
     background-repeat: no-repeat;
 }
 
-.hero-title {    
+.hero__title {    
     margin-bottom: 30px;
     text-transform: uppercase;
     text-align: center;    
@@ -262,14 +270,15 @@ img {
     text-align: center;    
 }
 /* Секция коротких текстов */
-.works-list {    
+.benefits {    
+    list-style: none;
     display: flex;    
 }
-.works + .works {    
+.benefits__item + .benefits__item {    
     margin-left: 30px;
 }
 
-.works-thumb {
+.benefits__thumb {
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
@@ -279,18 +288,18 @@ img {
     background: var(--brand-color-gray-light);
     border-radius: 4px;
 }
-.works-svg {    
+.benefits__icon {    
     width: 70px;
     height: 70px;    
 }
 
-.works-title {
+.benefits__title {
     margin-bottom: 10px;   
     font-size: 14px;    
     line-height: 1.17;    
     text-transform: uppercase;
 }
-.works-text {        
+.benefits__text {        
     width: 270px; 
     font-size: 14px;    
     line-height: 1.714;    
@@ -618,10 +627,10 @@ margin-bottom: 5px;
     transform: translate(-50%, -50%) scale(0.5);
 }
 /* декоративное подчеркивание */
-.site-nav-element {
+.site-nav__item {
     position: relative;
 }
-.site-nav-element>.link::after {    
+.site-nav__item > .site-nav__link::after {    
     position: absolute;
     content: "";
     display: block;
@@ -636,16 +645,21 @@ margin-bottom: 5px;
     transition-timing-function: var(--animation-timing-function);
 }
 
-.site-nav-element > .link:hover::after,
-.site-nav-element>.link:focus::after {
+.site-nav__item > .site-nav__link:hover::after,
+.site-nav__item > .site-nav__link:focus::after {
     transform: scaleX(1);
 }
 
-.link.current::after {
-    transform: scaleX(1);    
-}
+/* 
+.site-nav__link.current::after {
+    transform: scaleX(1);
+} */
 
-.button-close {
+
+.site-nav__link.site-nav__link--active::after {
+    transform: scaleX(1);
+}
+.modal__btn-close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -665,18 +679,18 @@ margin-bottom: 5px;
     transition-timing-function: var(--animation-timing-function);
 }
 
-.button-close:hover, 
-.button-close:focus-visible {
+.modal__btn-close:hover, 
+.modal__btn-close:focus-visible {
     color: var(--brand-color-blue-light);    
 }
 
-.button-close-svg {    
+.modal__btn-close-icon {    
     width: 11px;
     height: 11px;
     fill: currentColor;
 }
 
-.modal-title {
+.modal__title {
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
@@ -685,7 +699,7 @@ margin-bottom: 5px;
     color: #212121;
 }
 
-.form-field + .form-field {
+.modal__field + .modal__field {
     margin-top: 10px;
 }
 
@@ -695,7 +709,7 @@ margin-bottom: 5px;
     flex-direction: column;
     align-items: flex-start;
 }
-.form-input {
+.modal__input {
     padding: 10px 11px 10px 42px;
     line-height: 1.17;
     width: 100%;
@@ -707,7 +721,7 @@ margin-bottom: 5px;
     transition-duration: var(--animation-duration);
     transition-timing-function: var(--animation-timing-function);
 }
-.form-input::placeholder {
+.modal__input::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -715,47 +729,46 @@ margin-bottom: 5px;
     ;
 }
 
-.form-input:hover,
-.form-input:focus {
+.modal__input:hover,
+.modal__input:focus {
     border: 1px solid var(--brand-color-blue-light);
 }
-.comment {
+.modal__input-comment {
+    display: block;
     padding: 11px 15px;
     resize: none;
     height: 120px;
 }
 
-.form-field {
+.modal__field {
     display: flex;
     flex-direction: column;
 }
 
-.agreement {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin-left: 8px;
-    font-size: 14px;
-    text-align: left;
-    line-height: 1.71;
-    color: var(--brand-color-gray);
-}
-.agreement-field {
+.custom-checkbox {
     margin-top: 20px;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--brand-color-gray);
 }
-.agreement-field .input {
-    margin-left: 12px;
+
+.custom-checkbox__link {
+    margin-left: 4px;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.71;    
+    color: var(--brand-color-blue-light);
 }
 
 
-.div-for-position {
+.modal__decoration {
     position: relative;
 }
-.form-icon {
+.modal__field-icon {
     position: absolute;
     width: 18px;
     height: 18px;
@@ -769,16 +782,13 @@ margin-bottom: 5px;
     transition-timing-function: var(--animation-timing-function);
 }
 
-.form-input:hover + .form-icon,
-.form-input:focus + .form-icon {
+.modal__input:hover + .modal__field-icon,
+.modal__input:focus + .modal__field-icon {
     fill: var(--brand-color-blue-light);
 }
-.oferta {
-    margin-left: 4px;
-    color: var(--brand-color-blue-light);
-}
 
-.modal-checkbox {
+
+.custom-checkbox__input {
      position: absolute;
      width: 1px;
      height: 1px;
@@ -789,7 +799,7 @@ margin-bottom: 5px;
      overflow: hidden;
 }
 
-.modal-checkbox:checked + .new-checkbox {
+.custom-checkbox__input:checked + .custom-checkbox__icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='16' height='15' rx='2'/%3E%3Cpath d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z' fill='%23fff' stroke='%23fff' stroke-width='.2'/%3E%3C/svg%3E");
     border: 2px solid var(--brand-color-blue-light);
     background-color: var(--brand-color-blue-light);
@@ -797,9 +807,8 @@ margin-bottom: 5px;
     background-origin: border-box;
 }
 
-.new-checkbox {
-    
-    margin-right: 8px;
+.custom-checkbox__icon {
+    margin: 0 8px;
     display: inline-block;    
     width: 16px;
     height: 15px;
@@ -863,7 +872,7 @@ margin-bottom: 5px;
     display: flex;
 }
 
-.modal .form-label-span {
+.modal__field-label {
     display: block;
     margin-bottom: 4px;
     font-size: 12px;
@@ -871,10 +880,7 @@ margin-bottom: 5px;
     letter-spacing: 0.01em;
     color: var(--brand-color-gray);
 }
-.modal-button {
+.modal__button {
     letter-spacing: 0.06em;
     font-weight: 700;
-}
-.form-input.comment {
-    display: block;
 }
