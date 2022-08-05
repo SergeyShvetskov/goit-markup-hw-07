@@ -27,7 +27,7 @@
       <!--Логотип и навигация-->
       <div class="container">
         <nav class="header-page__nav">
-          <a class="logo logo-header link" href="./index.html"><span>Web</span>Studio</a>
+          <a class="logo" href="./index.html"><span class="logo__part">Web</span>Studio</a>
           <ul class="site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link site-nav__link--active" href="./index.html">Студия</a>
@@ -61,7 +61,7 @@
     </header>
     <!--Герой-->
     <main>
-      <div class="overlay">
+      <div class="hero__overlay">
         <section class="hero">
           <div class="container">
             <h1 class="hero__title">
@@ -70,7 +70,7 @@
             </h1>
             <button class="button" type="button" data-modal-open>Заказать услугу</button>
           </div>
-          <div class="backdrop is-hidden" data-modal>
+          <div class="hero__backdrop is-hidden" data-modal>
             <form class="modal" name="signup-form" autocomplete="on" novalidate>
               <button class="modal__btn-close" data-modal-close>
                 <svg class="modal__btn-close-icon">
@@ -199,32 +199,43 @@
       <section class="section no-padding-top">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
-          <ul class="photo-set">
-            <li class="photo">
-              <div class="photo-set-thumb">
-                <img src="./images/img5.jpg" alt="Фото процесса набора кода" width="370" />
-                <div class="photo-set-decor">
-                  <p class="photo-set-text">Десктопные приложения</p>
+          <ul class="workers">
+            <li class="workers__item">
+              <div class="workers__thumb">
+                <img
+                  class="workers__image"
+                  src="./images/img5.jpg"
+                  alt="Фото процесса набора кода"
+                  width="370"
+                />
+                <div class="workers__decor">
+                  <p class="workers__text">Десктопные приложения</p>
                 </div>
               </div>
             </li>
-            <li class="photo">
-              <div class="photo-set-thumb">
+            <li class="workers__item">
+              <div class="workers__thumb">
                 <img
+                  class="workers__image"
                   src="./images/img6.jpg"
                   alt="Фото процесса разработки дизайна мобильного приложения"
                   width="370"
                 />
-                <div class="photo-set-decor">
-                  <p class="photo-set-text">Мобильные приложения</p>
+                <div class="workers__decor">
+                  <p class="workers__text">Мобильные приложения</p>
                 </div>
               </div>
             </li>
-            <li class="photo">
-              <div class="photo-set-thumb">
-                <img src="./images/img7.jpg" alt="Фото карты цветов на планшете" width="370" />
-                <div class="photo-set-decor">
-                  <p class="photo-set-text">Дизайнерские решения</p>
+            <li class="workers__item">
+              <div class="workers__thumb">
+                <img
+                  class="workers__image"
+                  src="./images/img7.jpg"
+                  alt="Фото карты цветов на планшете"
+                  width="370"
+                />
+                <div class="workers__decor">
+                  <p class="workers__text">Дизайнерские решения</p>
                 </div>
               </div>
             </li>
@@ -235,40 +246,45 @@
       <section class="section personal">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
-          <ul class="personal-card-set">
-            <li class="personal-card-item">
-              <article>
-                <div class="card-thumb">
-                  <img src="./images/img1.jpg" alt="Фото Игорь Демьяненко" width="270" />
+          <ul class="personal-cards">
+            <li class="personal-cards__item">
+              <article class="card">
+                <div class="card__thumb">
+                  <img
+                    class="card__image"
+                    src="./images/img1.jpg"
+                    alt="Фото Игорь Демьяненко"
+                    width="270"
+                  />
                 </div>
-                <div class="personal-card-footer">
-                  <h3 class="personal-title">Игорь Демьяненко</h3>
-                  <p class="personal-text">Product Designer</p>
-                  <ul class="personal-card-icon-set list">
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                <div class="card__footer">
+                  <h3 class="card__title">Игорь Демьяненко</h3>
+                  <p class="card__text">Product Designer</p>
+                  <ul class="social-btns">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-twitter"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -278,39 +294,44 @@
               </article>
             </li>
 
-            <li class="personal-card-item">
-              <article>
-                <div class="card-thumb">
-                  <img src="./images/img2.jpg" alt="Фото Ольга Репина" width="270" />
+            <li class="personal-cards__item">
+              <article class="card">
+                <div class="card__thumb">
+                  <img
+                    class="card__image"
+                    src="./images/img2.jpg"
+                    alt="Фото Ольга Репина"
+                    width="270"
+                  />
                 </div>
-                <div class="personal-card-footer">
-                  <h3 class="personal-title">Ольга Репина</h3>
-                  <p class="personal-text">Frontend Developer</p>
-                  <ul class="personal-card-icon-set list">
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                <div class="card__footer">
+                  <h3 class="card__title">Ольга Репина</h3>
+                  <p class="card__text">Frontend Developer</p>
+                  <ul class="social-btns">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-twitter"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -320,39 +341,44 @@
               </article>
             </li>
 
-            <li class="personal-card-item">
-              <article>
-                <div class="card-thumb">
-                  <img src="./images/img3.jpg" alt="Фото Николай Тарасов" width="270" />
+            <li class="personal-cards__item">
+              <article class="card">
+                <div class="card__thumb">
+                  <img
+                    class="card__image"
+                    src="./images/img3.jpg"
+                    alt="Фото Николай Тарасов"
+                    width="270"
+                  />
                 </div>
-                <div class="personal-card-footer">
-                  <h3 class="personal-title">Николай Тарасов</h3>
-                  <p class="personal-text">Marketing</p>
-                  <ul class="personal-card-icon-set list">
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                <div class="card__footer">
+                  <h3 class="card__title">Николай Тарасов</h3>
+                  <p class="card__text">Marketing</p>
+                  <ul class="social-btns">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-twitter"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -362,39 +388,44 @@
               </article>
             </li>
 
-            <li class="personal-card-item">
-              <article>
-                <div class="card-thumb">
-                  <img src="./images/img4.jpg" alt="Фото Михаил Ермаков" width="270" />
+            <li class="personal-cards__item">
+              <article class="card">
+                <div class="card__thumb">
+                  <img
+                    class="card__image"
+                    src="./images/img4.jpg"
+                    alt="Фото Михаил Ермаков"
+                    width="270"
+                  />
                 </div>
-                <div class="personal-card-footer">
-                  <h3 class="personal-title">Михаил Ермаков</h3>
-                  <p class="personal-text">UI Designer</p>
-                  <ul class="personal-card-icon-set list">
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                <div class="card__footer">
+                  <h3 class="card__title">Михаил Ермаков</h3>
+                  <p class="card__text">UI Designer</p>
+                  <ul class="social-btns">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-instagram"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-twitter"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-facebook"></use>
                         </svg>
                       </button>
                     </li>
-                    <li class="personal-card-icon-item">
-                      <button class="personal-card-button">
-                        <svg class="personal-card-icon">
+                    <li class="social-btns__item">
+                      <button class="social-btns__btn">
+                        <svg class="social-btns__icon">
                           <use href="./images/icons.svg#icon-linkedin"></use>
                         </svg>
                       </button>
@@ -409,45 +440,45 @@
       <section class="section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
-          <ul class="regular-customers-set">
-            <li class="regular-customers-item">
-              <button class="regular-customers-button">
-                <svg class="regular-customers-icon">
+          <ul class="regular-customers__set">
+            <li class="regular-customers__item">
+              <button class="regular-customers__button">
+                <svg class="regular-customers__icon">
                   <use href="./images/icons.svg#icon-regular-customers-1"></use>
                 </svg>
               </button>
             </li>
-            <li class="regular-customers-item">
-              <button class="regular-customers-button">
-                <svg class="regular-customers-icon">
+            <li class="regular-customers__item">
+              <button class="regular-customers__button">
+                <svg class="regular-customers__icon">
                   <use href="./images/icons.svg#icon-regular-customers-2"></use>
                 </svg>
               </button>
             </li>
-            <li class="regular-customers-item">
-              <button class="regular-customers-button">
-                <svg class="regular-customers-icon">
+            <li class="regular-customers__item">
+              <button class="regular-customers__button">
+                <svg class="regular-customers__icon">
                   <use href="./images/icons.svg#icon-regular-customers-3"></use>
                 </svg>
               </button>
             </li>
-            <li class="regular-customers-item">
-              <button class="regular-customers-button">
-                <svg class="regular-customers-icon">
+            <li class="regular-customers__item">
+              <button class="regular-customers__button">
+                <svg class="regular-customers__icon">
                   <use href="./images/icons.svg#icon-regular-customers-4"></use>
                 </svg>
               </button>
             </li>
-            <li class="regular-customers-item">
-              <button class="regular-customers-button">
-                <svg class="regular-customers-icon">
+            <li class="regular-customers__item">
+              <button class="regular-customers__button">
+                <svg class="regular-customers__icon">
                   <use href="./images/icons.svg#icon-regular-customers-5"></use>
                 </svg>
               </button>
             </li>
-            <li class="regular-customers-item">
-              <button class="regular-customers-button">
-                <svg class="regular-customers-icon">
+            <li class="regular-customers__item">
+              <button class="regular-customers__button">
+                <svg class="regular-customers__icon">
                   <use href="./images/icons.svg#icon-regular-customers-6"></use>
                 </svg>
               </button>
@@ -456,11 +487,13 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer-page">
       <div class="container">
         <div>
           <!--Логотип-->
-          <a class="logo logo-footer link" href="./index.html"><span>Web</span>Studio</a>
+          <a class="logo footer-page__logo" href="./index.html"
+            ><span class="logo__part">Web</span>Studio</a
+          >
           <!--Контакты-->
           <address class="address street">г. Киев, пр-т Леси Украинки, 26</address>
           <address class="address">
@@ -468,33 +501,33 @@
             <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
           </address>
         </div>
-        <div class="social-set">
-          <h3 class="social-title">Присоединяйтесь</h3>
-          <ul class="personal-card-icon-set list">
-            <li class="personal-card-icon-item">
+        <div class="social">
+          <h3 class="social__title">Присоединяйтесь</h3>
+          <ul class="social-btns">
+            <li class="social-btns__item">
               <button class="footer-icon-button">
-                <svg class="footer-icon personal-card-icon">
+                <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </button>
             </li>
-            <li class="personal-card-icon-item">
+            <li class="social-btns__item">
               <button class="footer-icon-button">
-                <svg class="personal-card-icon">
+                <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </button>
             </li>
-            <li class="personal-card-icon-item">
+            <li class="social-btns__item">
               <button class="footer-icon-button">
-                <svg class="personal-card-icon">
+                <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </button>
             </li>
-            <li class="personal-card-icon-item">
+            <li class="social-btns__item">
               <button class="footer-icon-button">
-                <svg class="personal-card-icon">
+                <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </button>
@@ -502,14 +535,21 @@
           </ul>
         </div>
         <div class="mailing">
-          <h3 class="social-title">Подпишитесь на рассылку</h3>
-          <div class="footer-group">
+          <h3 class="mailing__title">Подпишитесь на рассылку</h3>
+          <div class="mailing__group">
             <label>
-              <input class="footer-input" name="mailing-email" type="email" placeholder="E-mail" />
+              <input
+                class="mailing__input"
+                name="mailing-email"
+                type="email"
+                placeholder="E-mail"
+              />
             </label>
-            <button class="footer-button" type="submit">
+            <button class="mailing__button" type="submit">
               Подписаться
-              <svg class="footer-button-icon"><use href="./images/icons.svg#icon-send"></use></svg>
+              <svg class="mailing__button-icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
             </button>
           </div>
         </div>
