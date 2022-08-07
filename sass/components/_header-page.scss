@@ -1,0 +1,15 @@
+.header-page {
+    border-bottom: 1px solid var(--brand-color-heder-line);
+}
+
+.header-page__nav {
+    align-items: center;
+    display: flex;
+}
+
+.header-page__container {
+    display: flex;
+    // padding-top: 25px;
+    // padding-bottom: 24px;
+    align-items: center;
+}

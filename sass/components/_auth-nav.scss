@@ -1,0 +1,44 @@
+.auth-nav {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+}
+
+.auth-nav__item+.auth-nav__item {
+    margin-left: 30px;
+}
+
+.auth-nav__link {
+    text-decoration: none;
+    line-height: 1.17;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--brand-color-gray);
+
+    transition: color;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: var(--animation-timing-function);
+}
+
+.auth-nav__link:hover,
+.auth-nav__link:focus {
+    color: var(--brand-color-blue-light);
+}
+
+
+.auth-nav__icon-mail {
+    height: 12px;
+    width: 16px;
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.auth-nav__icon-phone {
+    height: 16px;
+    width: 10px;
+    fill: currentColor;
+    margin-right: 10px;
+}

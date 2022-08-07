@@ -18,16 +18,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="body-page">
     <header class="header-page">
       <!--Логотип и навигация-->
-      <div class="container">
+      <div class="container header-page__container">
         <nav class="header-page__nav">
-          <a class="logo logo-header" href="./index.html"
-            ><span class="logo__part">Web</span>Studio</a
-          >
+          <a class="logo" href="./index.html"><span class="logo__part">Web</span>Studio</a>
           <ul class="site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link" href="./index.html">Студия</a>
@@ -62,7 +61,7 @@
     <main>
       <section class="section">
         <div class="container">
-          <h1 class="portfolio-card-set-title">Наши работы</h1>
+          <h1 class="portfolio-title">Наши работы</h1>
           <ul class="button-group">
             <li>
               <button class="button" type="button">Все</button>
@@ -82,7 +81,7 @@
           </ul>
         </div>
         <div class="container">
-          <ul class="portfolio-card__list">
+          <ul class="portfolio-card">
             <li class="portfolio-card__item">
               <a href="" class="portfolio-card__link">
                 <article class="portfolio-card__article">
@@ -313,45 +312,45 @@
       </section>
     </main>
     <footer class="footer-page">
-      <div class="container">
+      <div class="container footer-page__container">
         <div>
           <!--Логотип-->
           <a class="logo footer-page__logo" href="./index.html"
             ><span class="logo__part">Web</span>Studio</a
           >
           <!--Контакты-->
-          <address class="address street">г. Киев, пр-т Леси Украинки, 26</address>
+          <address class="address address__street">г. Киев, пр-т Леси Украинки, 26</address>
           <address class="address">
-            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+            <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
           </address>
         </div>
-        <div class="social">
-          <h3 class="social__title">Присоединяйтесь</h3>
+        <div class="footer-page__social">
+          <h3 class="footer-page__social-title">Присоединяйтесь</h3>
           <ul class="social-btns">
             <li class="social-btns__item">
-              <button class="footer-icon-button">
+              <button class="social-btns__btn footer-page__social-btn">
                 <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </button>
             </li>
             <li class="social-btns__item">
-              <button class="footer-icon-button">
+              <button class="social-btns__btn footer-page__social-btn">
                 <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </button>
             </li>
             <li class="social-btns__item">
-              <button class="footer-icon-button">
+              <button class="social-btns__btn footer-page__social-btn">
                 <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </button>
             </li>
             <li class="social-btns__item">
-              <button class="footer-icon-button">
+              <button class="social-btns__btn footer-page__social-btn">
                 <svg class="social-btns__icon">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>

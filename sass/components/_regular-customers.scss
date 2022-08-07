@@ -1,0 +1,41 @@
+/* Секция Постоянные клиенты */
+.regular-customers {
+    display: flex;
+    list-style: none;
+}
+
+
+.regular-customers__item+.regular-customers__item {
+    margin-left: 30px;
+}
+
+.regular-customers__icon {
+    fill: currentColor;
+    width: 106px;
+    height: 60px;
+}
+
+.regular-customers__button {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 170px;
+    height: 92px;
+    color: var(--brand-color-gray-icon);
+    cursor: pointer;
+    border: 1px solid var(--brand-color-gray-icon);
+    border-radius: 4px;
+    background-color: var(--brand-color-white);
+
+    transition: color, border;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: var(--animation-timing-function);
+}
+
+.regular-customers__button:hover,
+.regular-customers__button:focus {
+    color: var(--brand-color-blue-light);
+    border: 1px solid var(--brand-color-blue-light);
+
+}

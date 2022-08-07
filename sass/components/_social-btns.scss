@@ -1,0 +1,39 @@
+.social-btns {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.social-btns__btn {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--brand-color-gray-icon);
+    background: none;
+    border: none;
+    border-radius: 50%;
+
+    transition: color, background-color;
+    transition-duration: var(--animation-duration);
+    transition-timing-function: var(--animation-timing-function);
+}
+
+.social-btns__btn:hover,
+.social-btns__btn:focus {
+    color: var(--brand-color-white);
+    background-color: var(--brand-color-blue-light);
+}
+
+.social-btns__item+.social-btns__item {
+    margin-left: 10px;
+}
+
+.social-btns__icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
