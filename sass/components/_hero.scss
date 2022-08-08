@@ -3,9 +3,7 @@
     padding-bottom: 200px;
     text-align: center;
 
-&__backdrop.is-hidden .modal {
-        transform: translate(-50%, -50%) scale(0.5);
-    }
+
     
 &__button {
     margin: 0;
@@ -73,4 +71,8 @@
     opacity: 0;
     pointer-events: none;
 }
+&__backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
 }

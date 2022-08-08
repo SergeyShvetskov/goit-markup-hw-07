@@ -14,28 +14,4 @@
     display: flex;
 }
 
-&__social {
-    margin-top: 12px;
-    margin-left: 60px;
-}
-
-&__social-title {
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: var(--brand-color-white);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-}
-
-&__social-btn {
-    color: var(--brand-color-white);
-    background: rgba(255, 255, 255, 0.1);
-}
-
-&__social-btn:hover,
-&__social-btn:focus {
-    background-color: var(--brand-color-blue-light);
-}
 }
