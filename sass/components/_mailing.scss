@@ -1,9 +1,9 @@
 .mailing {
     margin-left: 93px;
     margin-top: 12px;
-}
 
-.mailing__title {
+
+&__title {
     margin-bottom: 20px;
     text-transform: uppercase;
     color: var(--brand-color-white);
@@ -13,7 +13,7 @@
     letter-spacing: 0.03em;
 }
 
-.mailing__input {
+&__input {
     margin-right: 12px;
     padding: 15px 16px;
     width: 358px;
@@ -24,15 +24,14 @@
     border-radius: 4px;
 }
 
-.mailing__input::placeholder {
-
+&__input::placeholder {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.mailing__button {
+&__button {
     padding: 0;
     margin: 0;
     min-width: 200px;
@@ -51,18 +50,15 @@
     color: var(--brand-color-white);
     background: var(--brand-color-blue-light);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
 }
 
-.mailing__button-icon {
+&__button-icon {
     margin-left: 10px;
     width: 24px;
     height: 24px;
 }
 
-.mailing__group {
+&__group {
     display: flex;
 }
-
-
-
+}

@@ -2,9 +2,10 @@
     list-style: none;
     display: flex;
     justify-content: center;
-}
 
-.social-btns__btn {
+    
+
+&__btn {
     width: 44px;
     height: 44px;
     padding: 0;
@@ -22,18 +23,19 @@
     transition-timing-function: var(--animation-timing-function);
 }
 
-.social-btns__btn:hover,
-.social-btns__btn:focus {
+&__btn:hover,
+&__btn:focus {
     color: var(--brand-color-white);
     background-color: var(--brand-color-blue-light);
 }
 
-.social-btns__item+.social-btns__item {
+&__item:not(:first-child) {
     margin-left: 10px;
 }
 
-.social-btns__icon {
+&__icon {
     fill: currentColor;
     width: 20px;
     height: 20px;
+}
 }

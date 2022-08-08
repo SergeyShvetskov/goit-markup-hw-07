@@ -1,13 +1,13 @@
 .card {
     padding: 0;
-}
 
-.card__footer {
+
+&__footer {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.card__title {
+&__title {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
@@ -15,20 +15,21 @@
     text-align: center;
 }
 
-.card__text {
+&__text {
     margin-bottom: 16px;
     line-height: 1.17;
     text-align: center;
     color: var(--brand-color-gray);
 }
 
-.card__thumb {
+&__thumb {
     position: relative;
     overflow: hidden;
 }
 
-.card__image {
+&__image {
     display: block;
     max-width: 100%;
     height: auto;
+    }
 }

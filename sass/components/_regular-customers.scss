@@ -2,20 +2,19 @@
 .regular-customers {
     display: flex;
     list-style: none;
-}
 
 
-.regular-customers__item+.regular-customers__item {
+&__item:not(:first-child) {
     margin-left: 30px;
 }
 
-.regular-customers__icon {
+&__icon {
     fill: currentColor;
     width: 106px;
     height: 60px;
 }
 
-.regular-customers__button {
+&__button {
     padding: 0;
     justify-content: center;
     align-items: center;
@@ -33,9 +32,10 @@
     transition-timing-function: var(--animation-timing-function);
 }
 
-.regular-customers__button:hover,
-.regular-customers__button:focus {
+&__button:hover,
+&__button:focus {
     color: var(--brand-color-blue-light);
     border: 1px solid var(--brand-color-blue-light);
 
+}
 }

@@ -1,15 +1,14 @@
 .header-page {
-    border-bottom: 1px solid var(--brand-color-heder-line);
-}
+    border-bottom: 1px solid var(--brand-color-header-line);
 
-.header-page__nav {
+
+&__nav {
     align-items: center;
     display: flex;
 }
 
-.header-page__container {
+&__container {
     display: flex;
-    // padding-top: 25px;
-    // padding-bottom: 24px;
     align-items: center;
+}
 }

@@ -2,13 +2,12 @@
     margin-left: auto;
     display: flex;
     list-style: none;
-}
 
-.auth-nav__item+.auth-nav__item {
+
+&__item:last-child {
     margin-left: 30px;
 }
-
-.auth-nav__link {
+&__link {
     text-decoration: none;
     line-height: 1.17;
     display: flex;
@@ -23,22 +22,23 @@
     transition-timing-function: var(--animation-timing-function);
 }
 
-.auth-nav__link:hover,
-.auth-nav__link:focus {
+&__link:hover,
+&__link:focus {
     color: var(--brand-color-blue-light);
 }
 
 
-.auth-nav__icon-mail {
+&__icon-mail {
     height: 12px;
     width: 16px;
     fill: currentColor;
     margin-right: 10px;
 }
 
-.auth-nav__icon-phone {
+&__icon-phone {
     height: 16px;
     width: 10px;
     fill: currentColor;
     margin-right: 10px;
+}
 }
